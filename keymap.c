@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |   Esc  |   1  |   2  |   3  |   4  |   5  |      |           |      |   6  |   7  |   8  |   9  |   0  |        |
+ * |   Esc  |   1  |   2  |   3  |   4  |   5  |      |           |      |   6  |   7  |   8  |   9  |   0  |   ¨^   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * |  Tab   |   Q  |   W  |   E  |   R  |   T  |  L2  |           |  L2  |   Y  |   U  |   I  |   O  |   P  |   Å    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|  L1  |           |  L1  |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |  -   | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |  L1  |  <|> |  ¨^  | Alt | LGui|                                       | Ctrl |  Alt  |   '  |  ¨^  |  L1   |
+ *   |  L1  |  <|> |      | Alt | LGui  |                                       | Ctrl | Alt  |   '  |      |  L1  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        | LEFT |RIGHT |       | DOWN | UP   |
@@ -54,17 +54,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,    KC_Q,             KC_W,             KC_E,     KC_R,     KC_T,   MO(2),
         KC_CAPS,   KC_A,             KC_S,             KC_D,     KC_F,     KC_G,
         KC_LSFT,   KC_Z,             KC_X,             KC_C,     KC_V,     KC_B,   MO(1),
-        MO(1),     KC_NONUS_BSLASH,  KC_RBRC,          KC_LALT,  KC_LGUI,
+        MO(1),     KC_NONUS_BSLASH,  _______,          KC_LALT,  KC_LGUI,
 
                                                        KC_LEFT, KC_RIGHT,
                                                                 KC_HOME,
                                                KC_ENT, KC_DELT, KC_END,
         // right hand
-        _______,     KC_6,   KC_7,      KC_8,     KC_9,     KC_0,        _______,
+        _______,     KC_6,   KC_7,      KC_8,     KC_9,     KC_0,        KC_RBRC,
         MO(2),       KC_Y,   KC_U,      KC_I,     KC_O,     KC_P,        KC_LBRC,
                      KC_H,   KC_J,      KC_K,     KC_L,     KC_SCLN,     KC_QUOT,
         MO(1),       KC_N,   KC_M,      KC_COMM,  KC_DOT,   KC_SLSH,     KC_RSFT,
-                             KC_RCTRL,  KC_RALT,  KC_BSLS,  KC_RBRC,     MO(1),
+                             KC_RCTRL,  KC_RALT,  KC_BSLS,  _______,     MO(1),
         KC_DOWN, KC_UP,
         KC_PGUP,
         KC_PGDN, KC_BSPC, KC_SPC
